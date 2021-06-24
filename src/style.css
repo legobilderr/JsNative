@@ -68,3 +68,10 @@ button {
 .modal-list .modal-content {
     text-align: center;
 }
+
+.modal-content label{
+    position: static;
+}
+.error {
+    color: red;
+}
