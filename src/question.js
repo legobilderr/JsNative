@@ -1,6 +1,6 @@
 export class Question {
     static loadOnServer(data) {
-        return fetch('https://jsnativeminin-default-rtdb.europe-west1.firebasedatabase.app/questions.json', {
+        return fetch( process.env.DATABASE_URL, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {

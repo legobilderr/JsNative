@@ -1,3 +1,4 @@
+Project based on Minin's video. Native javascript and webpack. The application works with firebays
 
 for start use node v 16 and "npm-install","npm run start"
 
