@@ -3,7 +3,7 @@ export function getFormAuth() {
     `<form class="mui-form" id="auth-form">
             <div class="mui-textfield mui-textfield--float-label">
                 <input type="email" id="email-input" required minlength="10" maxlength="256">
-                <label for="email-input">Ваш эмэйл</label>
+                <label for="email-input">Ваш емэйл</label>
                 <input type="password" id="password-input" required minlength="10" maxlength="256">
                 <label for="password-input">Ваш пароль</label>
             </div>
@@ -28,8 +28,8 @@ export function authWithEmailAndPassword(email, password){
 }
 
 export function registerEmailAndPassword(email, password){
-  const apiKey ='AIzaSyCEBt5XsdiK-APsHI3GlymQKnoh98rV6VI'
-  return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`,{
+  const apiKeySignUp =process.env.API_SIGN_UP
+  return fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKeySignUp}`,{
     method:'POST',
     body:JSON.stringify({
       email, password, returnSecureToken:true
